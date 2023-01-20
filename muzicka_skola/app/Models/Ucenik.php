@@ -21,4 +21,5 @@ class Ucenik extends Model
     {
         return $this->hasMany(Termin::class);
     }
+    public $timestamps = false;
 }

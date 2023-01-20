@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profesor extends Model
 {
+    use HasFactory;
     protected $fillable = [
         'ime',
         'prezime',
@@ -15,10 +16,11 @@ class Profesor extends Model
         'email',
         'radni_staz'
     ];
-    use HasFactory;
+
 
     public function termin()
     {
         return $this->hasMany(Termin::class);
     }
+    public $timestamps = false;
 }

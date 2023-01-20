@@ -25,4 +25,5 @@ class Termin extends Model
     {
         return $this->belongsTo(Ucenik::class);
     }
+    public $timestamps = false;
 }
