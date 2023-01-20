@@ -14,7 +14,7 @@ class ProfesorController extends Controller
      */
     public function index()
     {
-        //
+        return Profesor::all();
     }
 
     /**
@@ -44,9 +44,9 @@ class ProfesorController extends Controller
      * @param  \App\Models\Profesor  $profesor
      * @return \Illuminate\Http\Response
      */
-    public function show(Profesor $profesor)
+    public function show($id)
     {
-        //
+        return Profesor::find($id);
     }
 
     /**

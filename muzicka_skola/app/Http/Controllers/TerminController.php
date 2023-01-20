@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\TerminResource;
 use App\Models\Termin;
 use Illuminate\Http\Request;
+
+use function GuzzleHttp\Promise\all;
 
 class TerminController extends Controller
 {
@@ -14,7 +17,7 @@ class TerminController extends Controller
      */
     public function index()
     {
-        //
+        return TerminResource::collection(Termin::all());
     }
 
     /**
@@ -44,9 +47,9 @@ class TerminController extends Controller
      * @param  \App\Models\Termin  $termin
      * @return \Illuminate\Http\Response
      */
-    public function show(Termin $termin)
+    public function show($id)
     {
-        //
+        return new TerminResource(Termin::find($id));
     }
 
     /**
