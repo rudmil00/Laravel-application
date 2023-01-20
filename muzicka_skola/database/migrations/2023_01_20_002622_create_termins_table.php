@@ -15,7 +15,9 @@ return new class extends Migration
     {
         Schema::create('termins', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('id_profesor');
+            $table->foreignId('id_ucenik');
+            $table->string('datum_casa');
         });
     }
 

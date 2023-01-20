@@ -13,6 +13,7 @@ class Profesor extends Model
         'predmet',
         'datum_rodjenja',
         'email',
+        'radni_staz'
     ];
     use HasFactory;
 

@@ -11,7 +11,6 @@ class Ucenik extends Model
         'ime',
         'prezime',
         'instrument',
-        'pol',
         'datum_rodjenja',
         'email',
     ];

@@ -15,7 +15,11 @@ return new class extends Migration
     {
         Schema::create('uceniks', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('ime');
+            $table->string('prezime');
+            $table->string('instrument');
+            $table->string('datum_rodjenja');
+            $table->string('email');
         });
     }
 
