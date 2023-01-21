@@ -18,5 +18,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('profesor', [ProfesorController::class, 'index']);
 Route::get('profesor/{id}', [ProfesorController::class, 'show']);
+Route::delete('profesor/{id}', [ProfesorController::class, 'destroy']);
+Route::post('/profesor', [ProfesorController::class, 'store']);
+Route::put('/profesor/{id}', [ProfesorController::class, 'update']);
 Route::get('termin', [TerminController::class, 'index']);
 Route::get('termin/{id}', [TerminController::class, 'show']);
